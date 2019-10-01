@@ -26,7 +26,8 @@ L'archive contient un dossier `bin` dans lequel se trouve des scripts bat que no
 
 Avant toute chose, modifier la variable d'environnement `PATH` pour faire référence aux bonnes versions de Java et de Python :
 
-    set PATH=C:\Python2.7;"c:\Program Files\Java\jdk1.8.0_221\bin";%PATH%
+    PATH="c:\Program Files\Java\jdk1.8.0_221\bin";%PATH%
+    PATH=C:\Python2.7;%PATH%
 
 Créer également la variable `JAVA_HOME` qui pointe vers le dossier d'installation de Java (sans le sous dossier bin) :
 
