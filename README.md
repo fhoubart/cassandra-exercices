@@ -28,6 +28,10 @@ Avant toute chose, modifier la variable d'environnement `PATH` pour faire réfé
 
     set PATH=C:\Python2.7;"c:\Program Files\Java\jdk1.8.0_221\bin";%PATH%
 
+Créer également la variable `JAVA_HOME` qui pointe vers le dossier d'installation de Java (sans le sous dossier bin) :
+
+    set JAVA_HOME="c:\Program Files\Java\jdk1.8.0_221"
+
 ensuite, dans le dossier `bin` de l'archive Cassandra, lancer le serveur à l'aide du script :
 
     cassandra.bat
