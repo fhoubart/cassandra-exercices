@@ -22,16 +22,13 @@ Télécharger python sur https://www.python.org/download/releases/2.7/ et lancer
 
 Cassandra ne nécessite pas d'installation. Télécharger l'archive sur http://cassandra.apache.org/download/ et la décompresser.
 
-L'archive contient un dossier `bin` dans lequel se trouve des scripts bat que nous allons utiliser pour lancer le serveur et le client. Les opérations suivantes se font dans une fenêtre cmd.
+L'archive contient un dossier `bin` dans lequel se trouve des scripts bat que nous allons utiliser pour lancer le serveur et le client.
 
-Avant toute chose, modifier la variable d'environnement `PATH` pour faire référence aux bonnes versions de Java et de Python :
+Lancer une fenêtre cmd pour modifier les variables d'environnement de la session avant de lancer Cassandra.
 
-    PATH="c:\Program Files\Java\jdk1.8.0_221\bin";%PATH%
-    PATH=C:\Python2.7;%PATH%
+Avant toute chose, modifier la variable d'environnement `JAVA_HOME` pour faire référence à la bonne version de java (attention à ne pas mettre de guillemets):
 
-Créer également la variable `JAVA_HOME` qui pointe vers le dossier d'installation de Java (sans le sous dossier bin) :
-
-    set JAVA_HOME="c:\Program Files\Java\jdk1.8.0_221"
+    set JAVA_HOME=c:\Program Files\Java\jdk1.8.0_221
 
 ensuite, dans le dossier `bin` de l'archive Cassandra, lancer le serveur à l'aide du script :
 
@@ -49,8 +46,19 @@ Cette commande affiche le status des noeuds Cassandra, s'il affiche un serveur u
 
 ### Lancement du client cqlsh
 
-Toujours dans la même fenêtre cmd, ou dans une nouvelle en ayant spécifié le PATH qui va bien, lancer la commande :
+Le client CQL est basé sur du Python 2, ce qui peut poser problème si le système possède déjà une installation de Python 3.
 
-    cqlsh.bat
+Deux solutions :
+
+    1. Dans une fenêtre cmd, mettre à jour la variable `PATH` pour faire référence au chemin d'installation de Python 2 :
+
+        PATH=C:\Python2.7;%PATH%
+
+    Puis lancer le script `cqlsh.bat`
+
+    2. Dans une fenêtre cmd, lancer directement le script `cqlsh.py` à l'aide du bon interpréteur Python :
+
+        C:\Python2.7\python cqlsh.py
+
 
 Après un certains nombre de messages, le prompt doit devenir `cqlsh>`. Vous êtes maintenant prèt à lancer des commandes CQL !
