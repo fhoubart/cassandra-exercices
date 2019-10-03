@@ -50,13 +50,13 @@ Le client CQL est basé sur du Python 2, ce qui peut poser problème si le syst�
 
 Deux solutions :
 
-    1. Dans une fenêtre cmd, mettre à jour la variable `PATH` pour faire référence au chemin d'installation de Python 2 :
+1. Dans une fenêtre cmd, mettre à jour la variable `PATH` pour faire référence au chemin d'installation de Python 2 :
 
         PATH=C:\Python2.7;%PATH%
 
     Puis lancer le script `cqlsh.bat`
 
-    2. Dans une fenêtre cmd, lancer directement le script `cqlsh.py` à l'aide du bon interpréteur Python :
+2. Dans une fenêtre cmd, lancer directement le script `cqlsh.py` à l'aide du bon interpréteur Python :
 
         C:\Python2.7\python cqlsh.py
 
